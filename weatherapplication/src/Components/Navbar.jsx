@@ -1,21 +1,32 @@
 import React from "react";
 
-function Navbar() {
+function Navbar({ cityfnct }) {
   const city = [
-    { id: "1", city: "London" },
-    { id: "2", city: "Sydney" },
+    { id: "1", city: "Bengaluru" },
+    { id: "2", city: "Dehli" },
 
-    { id: "3", city: "Tokyo" },
+    { id: "3", city: "Mumbai" },
 
-    { id: "4", city: "Toronto" },
+    { id: "4", city: "pune" },
 
-    { id: "5", city: "Paris" },
+    { id: "5", city: "Hyderabad" },
   ];
+
+  const getdata = (cityname) => {
+    cityfnct(cityname);
+  };
+
   return (
     <div className="text-white flex justify-around px-8 font-medium">
       {city.map((ele) => {
         return (
-          <button id={ele.id} className="hover:cursor-pointer">
+          <button
+            onClick={() => {
+              getdata(ele.city);
+            }}
+            id={ele.id}
+            className="hover:cursor-pointer"
+          >
             {ele.city}
           </button>
         );

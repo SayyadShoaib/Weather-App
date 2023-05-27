@@ -4,16 +4,29 @@ import {
   faMagnifyingGlass,
   faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
-function Search() {
+
+import { useState } from "react";
+function Search({ cityfnct }) {
+  const [state, setState] = useState("");
+  const handleinput = (e) => {
+    const city = e.target.value;
+    setState(city);
+  };
+
+  const handlesearch = () => {
+    cityfnct(state);
+  };
   return (
     <div className="flex flex-row justify-around my-10 items-center">
       <div className="flex  w-3/4 justify-center space-x-4 flex-row items-center mx-4">
         <input
+          onChange={handleinput}
           type="text"
           placeholder="search with City name.... "
           className="py-2 focus:outline-none capitalize placeholder:capitalize w-3/4 shadow-xl text-xl text-center"
         />
         <FontAwesomeIcon
+          onClick={handlesearch}
           icon={faMagnifyingGlass}
           size={25}
           className="hover:scale-125 transition ease-out  text-white cursor-pointer"
