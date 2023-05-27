@@ -6,7 +6,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import { useState } from "react";
-function Search({ cityfnct }) {
+function Search({ cityfnct, unit }) {
   const [state, setState] = useState("");
   const handleinput = (e) => {
     const city = e.target.value;
@@ -15,6 +15,14 @@ function Search({ cityfnct }) {
 
   const handlesearch = () => {
     cityfnct(state);
+  };
+
+  const changetocelcuis = () => {
+    unit("metric");
+  };
+
+  const changetoferrenite = () => {
+    unit("imperial ");
   };
   return (
     <div className="flex flex-row justify-around my-10 items-center">
@@ -39,6 +47,7 @@ function Search({ cityfnct }) {
       </div>
       <div className="flex justify-center w-1/4  flex-row items-center">
         <button
+          onClick={changetocelcuis}
           className="text-white cursor-pointer font-light text-xl
         "
         >
@@ -46,6 +55,7 @@ function Search({ cityfnct }) {
         </button>
         <p className="mx-2 text-white">|</p>
         <button
+          onClick={changetoferrenite}
           className="text-white cursor-pointer font-light text-xl
         "
         >

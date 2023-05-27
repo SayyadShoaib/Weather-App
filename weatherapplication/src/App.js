@@ -29,7 +29,7 @@ function App() {
       {Data ? (
         <div>
           <Navbar weather={Data} cityfnct={getCity} />
-          <Search weather={Data} cityfnct={getCity} />
+          <Search weather={Data} cityfnct={getCity} unit={getUnit} />
           <DateandTime weather={Data} />
           <Information weather={Data} />
         </div>

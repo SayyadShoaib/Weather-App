@@ -68,7 +68,8 @@ const DateCOnverter = (
   dt,
   format = " cccc, dd LLL yyyy' | Local Time :' hh:mm a"
 ) => {
-  return DateTime.fromSeconds(dt).setZone(timezone).toFormat(format);
+  //DateTime.fromSeconds(dt).setZone(timezone).toFormat(format);
+  return DateTime.now().setZone(timezone).toFormat(format);
 };
 
 const geticon = (icon) => {
