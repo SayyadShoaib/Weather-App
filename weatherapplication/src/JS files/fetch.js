@@ -52,14 +52,6 @@ const getweatherdata = async (param) => {
     formatCurrentData(data)
   );
 
-  const { timezone, dt } = Currentdata;
-
-  const { icon } = Currentdata;
-
-  DateCOnverter(timezone, dt);
-  const icondata = geticon(icon);
-  // console.log(icondata);
-
   return Currentdata;
 };
 

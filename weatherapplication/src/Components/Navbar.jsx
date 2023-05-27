@@ -17,7 +17,7 @@ function Navbar({ cityfnct }) {
   };
 
   return (
-    <div className="text-white flex justify-around px-8 font-medium">
+    <div className="text-white flex justify-around px-8 font-medium max-[420px]:text-xs">
       {city.map((ele) => {
         return (
           <button

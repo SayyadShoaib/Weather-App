@@ -45,7 +45,7 @@ function Search({ cityfnct, unit }) {
           className="hover:scale-125 transition ease-out  text-white cursor-pointer"
         />
       </div>
-      <div className="flex justify-center w-1/4  flex-row items-center">
+      <div className="flex justify-center w-1/4  flex-row items-center ">
         <button
           onClick={changetocelcuis}
           className="text-white cursor-pointer font-light text-xl

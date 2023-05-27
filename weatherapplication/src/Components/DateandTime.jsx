@@ -10,10 +10,10 @@ function DateandTime({ weather }) {
       className="text-center
     "
     >
-      <div className="my-6 text-white justify-center items-center font-extralight">
+      <div className="my-6 text-white justify-center items-center font-extralight max-[420px]:text-xs">
         {date}
       </div>
-      <div className="font-medium text-white text-xl my-3">
+      <div className="font-medium text-white text-xl my-3 max-[420px]:text-xs">
         {name} ,{country}
       </div>
     </div>
